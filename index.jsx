@@ -1,7 +1,8 @@
 import React from "react";
 import cx from "classnames";
 
-import {CHECKBOX} from "../../constants";
+// import {CHECKBOX} from "../../constants";
+const CHECKBOX = "hire-checkbox"
 
 class Checkbox extends React.Component {
 	handleClick() {
@@ -33,18 +34,16 @@ class Checkbox extends React.Component {
 						width="190"
 						x="15"
 						y="15" />
-					<g transform="rotate(45) translate(40, -80)">
-						<rect
-							height="200"
-							width="20"
-							x="180"
-							y="0" />
-						<rect
-							height="20"
-							width="200"
-							x="0"
-							y="180" />
-					</g>
+					<rect
+						height="200"
+						width="20"
+						x="180"
+						y="0" />
+					<rect
+						height="20"
+						width="200"
+						x="0"
+						y="180" />
 				</svg>
 				{label}
 			</div>

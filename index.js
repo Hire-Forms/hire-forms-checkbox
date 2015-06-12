@@ -20,7 +20,8 @@ var _classnames = require("classnames");
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _constants = require("../../constants");
+// import {CHECKBOX} from "../../constants";
+var CHECKBOX = "hire-checkbox";
 
 var Checkbox = (function (_React$Component) {
 	function Checkbox() {
@@ -54,7 +55,7 @@ var Checkbox = (function (_React$Component) {
 			return _react2["default"].createElement(
 				"div",
 				{
-					className: (0, _classnames2["default"])(_constants.CHECKBOX, { checked: this.props.value }),
+					className: (0, _classnames2["default"])(CHECKBOX, { checked: this.props.value }),
 					onClick: this.handleClick.bind(this) },
 				_react2["default"].createElement(
 					"svg",
@@ -69,20 +70,16 @@ var Checkbox = (function (_React$Component) {
 						width: "190",
 						x: "15",
 						y: "15" }),
-					_react2["default"].createElement(
-						"g",
-						{ transform: "rotate(45) translate(40, -80)" },
-						_react2["default"].createElement("rect", {
-							height: "200",
-							width: "20",
-							x: "180",
-							y: "0" }),
-						_react2["default"].createElement("rect", {
-							height: "20",
-							width: "200",
-							x: "0",
-							y: "180" })
-					)
+					_react2["default"].createElement("rect", {
+						height: "200",
+						width: "20",
+						x: "180",
+						y: "0" }),
+					_react2["default"].createElement("rect", {
+						height: "20",
+						width: "200",
+						x: "0",
+						y: "180" })
 				),
 				label
 			);

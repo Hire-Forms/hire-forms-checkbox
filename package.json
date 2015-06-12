@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Hire-Forms/hire-forms-checkbox/issues"
   },
-  "homepage": "https://github.com/Hire-Forms/hire-forms-checkbox"
+  "homepage": "https://github.com/Hire-Forms/hire-forms-checkbox",
+  "browserify": {
+    "transform": ["babelify"]
+  }
 }
