@@ -1,28 +1,31 @@
-import React from "react";
-import cx from "classnames";
+import * as React from "react";
+import * as cx from "classnames";
 
-// import {CHECKBOX} from "../../constants";
-const CHECKBOX = "hire-checkbox"
 
-class Checkbox extends React.Component {
-	handleClick() {
+interface IProps {
+	label: string;
+	onChange: (value: boolean) => void;
+	value: boolean;
+}
+
+class Checkbox extends React.Component<IProps, null> {
+	private handleClick = () => {
 		this.props.onChange(!this.props.value);
-	}
+	};
 
-	render() {
-		let label;
-
-		if (this.props.label) {
-			label = (<label>{this.props.label}</label>);
-		}
+	public render() {
+		const label = (this.props.label) ?
+			<label>{this.props.label}</label> :
+			null;
 
 		return (
 			<div
 				className={cx(
-					CHECKBOX,
+					"hire-forms-checkbox",
 					{checked: this.props.value}
 				)}
-				onClick={this.handleClick.bind(this)}>
+				onClick={this.handleClick}
+			>
 				<svg viewBox="0 0 240 220">
 					<g className="box">
 						<rect
@@ -62,15 +65,5 @@ class Checkbox extends React.Component {
 		);
 	}
 }
-
-Checkbox.defaultProps = {
-	value: false
-};
-
-Checkbox.propTypes = {
-	label: React.PropTypes.string,
-	onChange: React.PropTypes.func.isRequired,
-	value: React.PropTypes.bool
-};
 
 export default Checkbox;
