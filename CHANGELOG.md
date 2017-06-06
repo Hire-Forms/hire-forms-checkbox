@@ -1,3 +1,6 @@
+### v1.0.4	(2017/6/6 22:0)
+* Change to use TypeScript
+
 ### v1.0.3	(2016/4/11 12:28)
 * Simplify checkbox
 
